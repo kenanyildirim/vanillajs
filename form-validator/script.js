@@ -68,10 +68,7 @@ checkPasswordsMatch=(input1,input2)=>{
 //event listeners
 form.addEventListener("submit", e => {
   e.preventDefault();
-  let requiredStatus=checkRequired([username,email,password,password2]);
-  if(!requiredStatus){
-    return;
-  }
+  checkRequired([username,email,password,password2]);
   checkLength(username,3,15);
   checkLength(password,6,25);
   checkEmail(email);
